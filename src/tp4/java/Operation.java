@@ -3,7 +3,12 @@ package tp4.java;
 import java.time.LocalDateTime;
 
 import javax.persistence.*;
-
+/***
+ * Manage la classe et la table opération 
+ * Relation avec un seul compte par opérations mais plusieurs opération par compte
+ * @author Diginamic
+ *
+ */
 @Entity
 @Table(name="operation")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)

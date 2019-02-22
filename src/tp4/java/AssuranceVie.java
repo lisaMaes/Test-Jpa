@@ -3,7 +3,11 @@ package tp4.java;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
-
+/***
+ * Manage la table assurance vie qui herite de la classe compte
+ * @author Diginamic
+ *
+ */
 @Entity
 public class AssuranceVie extends Compte{
 	

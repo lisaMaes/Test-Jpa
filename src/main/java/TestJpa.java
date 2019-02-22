@@ -9,6 +9,12 @@ import javax.persistence.Query;
 
 import java.util.Set;
 
+/***
+ * Appelle la base de données et fait les persistences
+ * @author Diginamic
+ *
+ */
+
 public class TestJpa {
 
 	public static void main( String[] args ){

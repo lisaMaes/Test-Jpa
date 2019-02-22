@@ -1,7 +1,11 @@
 package tp4.java;
 
 import javax.persistence.Embeddable;
-
+/***
+ * Genere l'objet adresse embarqué dans la table client
+ * @author Diginamic
+ *
+ */
 @Embeddable
 public class Adresse {
 	

@@ -1,7 +1,11 @@
 package tp4.java;
 
 import javax.persistence.Entity;
-
+/***
+ * Manage les livret A hérite de la classe compte
+ * @author Diginamic
+ *
+ */
 @Entity
 public class LivretA extends Compte{
 

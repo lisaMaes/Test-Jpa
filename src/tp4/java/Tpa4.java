@@ -9,7 +9,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-
+/**
+ * Appele la base de données pour les opération de persistence
+ * @author Diginamic
+ *
+ */
 public class Tpa4 {
 	
 	public static void main (String[] args){
@@ -17,6 +21,8 @@ public class Tpa4 {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("banqueTp");
 	//	EntityManager em = entityManagerFactory.createEntityManager();
 		
+		
+		//Création des différents objets à genere afin d'initialiser la création des tables en bdd (cf drop and create)
 		LocalDate dateNaiss = LocalDate.of(1989, 12, 3);
 		LocalDate dateFin = LocalDate.of(2018, 04, 9);
 		LocalDateTime now = LocalDateTime.of(2018, 04, 9, 12,52,00);
@@ -74,9 +80,10 @@ public class Tpa4 {
 		compte.setOperations(operations);
 		
 
-		
+		//creation d'une instance d'entity manager
 		EntityManager em1 = entityManagerFactory.createEntityManager();
 		
+		//Creation d'une transition permet d'envoyer toute l'operaiton dun coup
 		EntityTransaction et1 = em1.getTransaction();
 		
 		LivretA livretA = new LivretA();
@@ -106,20 +113,22 @@ public class Tpa4 {
 		assuranceVie.setNumero("4564646dkmlzqjkldj5df1qs465f");
 		assuranceVie.setOperations(operations1);
 		
-		
+		et1.begin();
+		//persistence
 		em1.persist(banque);
 		em1.persist(client);
 		em1.persist(compte);
 		em1.persist(compte1);
 		em1.persist(operation);
 		
-		et1.begin();
+		
 		em1.persist(livretA);
 		em1.persist(virement);
 		em1.persist(assuranceVie);
 		
-		
+		//envoie des persitence
 		et1.commit();
+		//fermeture de l'entity manager
 		em1.close();
 	}
 }

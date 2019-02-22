@@ -3,7 +3,11 @@ package tp4.java;
 import java.util.Set;
 
 import javax.persistence.*;
-
+/***
+ * Manage la table banque avec une relation d'une banque par client
+ * @author Diginamic
+ *
+ */
 @Entity
 @Table(name="banque")
 public class Banque {

@@ -1,5 +1,8 @@
 package main.java;
-
+/**
+ * Manage les emprunts avec une many to many sur les livre et 
+ * une relation d'un client par emprunt
+ */
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

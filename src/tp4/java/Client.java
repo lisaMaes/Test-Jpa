@@ -4,7 +4,14 @@ import java.time.LocalDate;
 import java.util.Set;
 
 import javax.persistence.*;
-
+/**
+ * Manage la table client
+ * embarque l'objet adresse
+ * A une relation de many to many avec la classe compte
+ * Et une relation d'une banque par client
+ * @author Diginamic
+ *
+ */
 @Entity
 @Table(name="client")
 public class Client {

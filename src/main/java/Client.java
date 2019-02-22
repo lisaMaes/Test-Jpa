@@ -3,7 +3,11 @@ package main.java;
 import java.util.Set;
 
 import javax.persistence.*;
-
+/**
+ * Manage la table client avec une relation d'un client pour plusieur emprunts
+ * @author Diginamic
+ *
+ */
 @Entity
 @Table(name="client")
 public class Client {

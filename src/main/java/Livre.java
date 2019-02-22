@@ -4,7 +4,12 @@ package main.java;
 import java.util.Set;
 
 import javax.persistence.*;
-
+/**
+ * Manage la classe livre
+ * avec une jointure sur la classe emprunt en many to many
+ * @author Diginamic
+ *
+ */
 @Entity
 @Table(name="livre")
 public class Livre {

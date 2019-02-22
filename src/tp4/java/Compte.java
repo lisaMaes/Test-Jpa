@@ -3,7 +3,13 @@ package tp4.java;
 import java.util.Set;
 
 import javax.persistence.*;
-
+/***
+ * Manage la table compte
+ * Relation many to many avec la classe client
+ * Et une relation de plusieurs opérations par compte mais un seul compte par opérations
+ * @author Diginamic
+ *
+ */
 @Entity
 @Table(name="compte")
 @Inheritance(strategy = InheritanceType.JOINED)
